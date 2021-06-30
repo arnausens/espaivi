@@ -1,0 +1,62 @@
+.top-component-container {
+    display: flex;
+    justify-content: center;
+}
+
+.top-component {
+    width: 90vw;
+    height: 250px;
+    font-size: 2em;
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #cea123;
+  
+
+    .nav-bar {
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 40px;
+
+        &__inicio, &__productos, &__bodega, &__contacto {
+            padding-right: 10px;
+            padding-left: 10px;
+            border-bottom: 2px inset transparent; 
+            border-radius: 5px;
+            transition: 0.4s ease-in;
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                border-bottom: 2px inset #cea123; 
+                box-shadow: inset -2px -50px 36px -60px #cea123;
+                cursor: pointer;
+                color: #cea123;
+    
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .top-component-container{
+        .top-component {
+            height: auto;
+            .nav-bar {
+                width: 60vw;
+                flex-direction: column;
+                text-align: center;
+            }
+        }   
+    } 
+}
+@media (max-width: 450px) {
+    .top-component__logo-img {
+        width: 100vw;
+    }
+}
